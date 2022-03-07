@@ -73,7 +73,7 @@ namespace APM.SL.Test
     public void CalculateMargin_WhenValidCostLessThan1_ShouldReturn100()
     {
       // Arrange
-      string cost = ".01";
+      string cost = "0,01";
       string price = "100";
       decimal expected = 100M;
       var product = new Product();
@@ -105,8 +105,8 @@ namespace APM.SL.Test
     public void CalculateMargin_WhenValidSmallValues50PercentOfPrice_ShouldReturn50()
     {
       // Arrange
-      string cost = ".01";
-      string price = ".02";
+      string cost = "0,01";
+      string price = "0,02";
       decimal expected = 50M;
       var product = new Product();
 
@@ -121,7 +121,7 @@ namespace APM.SL.Test
     public void CalculateMargin_WhenValidCostContainsDecimal50PercentOfPrice_ShouldReturn50()
     {
       // Arrange
-      string cost = "49.55";
+      string cost = "49,55";
       string price = "100";
       decimal expected = 50M;
       var product = new Product();
